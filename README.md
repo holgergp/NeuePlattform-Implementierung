@@ -24,11 +24,10 @@ Preparations for use
 
             cmd.exe /E:ON /V:ON /T:0E /K "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /Release /X86
 
-  * If python 3 is the default, the command should be adopted with the right python version (2.7)
+  * Alternatively run `npm install` in the [Windows SDK Command Promt](http://msdn.microsoft.com/en-us/library/ms229859.aspx)
+  * If python 3 is the default version, the command line for `npm install` must be adopted with the right python version (2.7)
 
             npm install --python /usr/bin/python2
-
-  * Alternatively run `npm install` in the [Windows SDK Command Promt](http://msdn.microsoft.com/en-us/library/ms229859.aspx)
 
 Running the server
 ------------------
@@ -53,6 +52,8 @@ To run the tests, you need to install Grunt. We propose to install Grunt globall
         export PATH=GLOBALPATH/bin/:$PATH
 
 Now, you can run the tests in *REPO* with `npm test`
+
+To run the style check (jshint) and the tests on every file change, use `grunt watch`
 
 Debugging the tests from IDE [Webstorm](http://www.jetbrains.com/webstorm/)
 ----------
